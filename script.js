@@ -39,9 +39,6 @@ function fungsiBawaan(x, jenis) {
         case "linear": return 2 * x + 1;
 
         case "abs": return Math.abs(x);
-        case "x2min4": return x * x - 4;
-        case "faktor": return x * (x - 2);
-        case "kubik2": return x * x * x - 3 * x;
         case "xsinx": return x * Math.sin(x);
 
         case "sin": return Math.sin(x);
