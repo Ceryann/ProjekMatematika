@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pergeseran Fungsi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h3>Pergeseran Grafik Fungsi</h3>
+
+<label>Fungsi:</label>
+<select id="pilihan" onchange="ubahMode()">
+    <option value="x2">y = x²</option>
+    <option value="x3">y = x³</option>
+    <option value="linear">y = 2x + 1</option>
+
+    <option value="abs">y = |x|</option>
+    <option value="x2min4">y = x² − 4</option>
+    <option value="faktor">y = x(x − 2)</option>
+    <option value="kubik2">y = x³ − 3x</option>
+    <option value="xsinx">y = x·sin(x)</option>
+
+    <option value="sin">y = sin(x)</option>
+    <option value="cos">y = cos(x)</option>
+
+    <option value="custom">Isi sendiri</option>
+</select>
+
+
+
+
+<div id="customArea" style="display:none;">
+    <br>
+    <input type="text" id="fungsi" placeholder="contoh: x^2 - 4">
+    <div class="keyboard">
+        <button onclick="tambah('x')">x</button>
+        <button onclick="tambah('+')">+</button>
+        <button onclick="tambah('-')">−</button>
+        <button onclick="tambah('*')">×</button>
+        <button onclick="tambah('/')">÷</button>
+        <button onclick="tambah('^')">^</button>
+        <button onclick="tambah('sin(')">sin</button>
+        <button onclick="tambah('cos(')">cos</button>
+        <button onclick="tambah('(')">(</button>
+        <button onclick="tambah(')')">)</button>
+    </div>
+</div>
+
+<br>
+
+<label>a:</label>
+<input type="number" id="a" value="0">
+<label>b:</label>
+<input type="number" id="b" value="0">
+
+<br><br>
+
+<button onclick="tambahGrafik()">Tambah Grafik</button>
+<button onclick="clearGrafik()">Clear</button>
+
+<br><br>
+
+<canvas id="grafik" width="800" height="500"></canvas>
+
+<p id="info"></p>
+
+<script src="script.js"></script>
+<!-- Tombol Credits -->
+<button id="btnCredits" onclick="openCredits()">Credits</button>
+
+<!-- Modal Credits -->
+<div id="creditsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCredits()">&times;</span>
+
+        <h2 style="text-align:center;">Credits</h2>
+
+        <p><b>Project:</b> Pergeseran Grafik Fungsi</p>
+        <p><b>Nama:</b> Muhammad Ghazwan Caesaryan</p>
+        <p><b>NIM:</b> 25051204097</p>
+        <p><b>Kelas:</b> TI A 25</p>
+        <p><b>Program Studi:</b> Teknik Informatika</p>
+        <p><b>Fakultas:</b> Teknik</p>
+        <p><b>Universitas Negeri Surabaya</b></p>
+
+        <br>
+
+        <p style="text-align:justify;">
+            Dibuat guna memenuhi tugas project sebagai pengganti UAS
+            pada mata kuliah <b>Matematika</b> yang diampuh oleh
+           <b> Ibu Dr. Dian Savitri, S.Si., M.Si
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
